@@ -90,7 +90,7 @@ const getAllBooksHandler = (request, h) => {
 
     if (params.reading) {
 
-        if (params.reading == 1) {
+        if (params.reading === 1) {
             statusread = true
         }
 
@@ -110,7 +110,7 @@ const getAllBooksHandler = (request, h) => {
     }
 
     if (params.finished) {
-        if (params.finished == 1) {
+        if (params.finished === 1) {
             finishread = true
         }
         const books = db.filter((book) => book.finished === finishread).map((book) => ({
